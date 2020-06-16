@@ -26,11 +26,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
 }
 
 h3 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
 }
 
 a {
@@ -40,6 +44,13 @@ a {
 
 section {
   width: 100%;
+}
+
+.link {
+  border: 2px solid #fafafa;
+  padding: .5em 1.5em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 #header {
@@ -120,13 +131,6 @@ section {
   letter-spacing: 1px;
 }
 
-.hero .hero__bg .bg__content--link {
-  border: 2px solid #fafafa;
-  padding: .5em 1.5em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
 .service .container--service {
   display: -ms-grid;
   display: grid;
@@ -134,7 +138,7 @@ section {
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   grid-gap: 3em;
   justify-items: center;
-  margin: 9em 2.2em;
+  margin: 9em 1.8em;
 }
 
 .service .container--service .service--title {
@@ -152,7 +156,7 @@ section {
   background-color: #95a9c6;
 }
 
-.service .container--service .service--title .service--h1 {
+.service .container--service .service--title .service--h2 {
   margin: .7em 0;
 }
 
@@ -185,5 +189,44 @@ section {
   color: #837d87;
   font-size: 1.7rem;
   line-height: 25px;
+}
+
+.contact .container--contact {
+  background-color: #2d2640;
+  color: #fafafa;
+  margin: 3em 1.8em;
+  position: relative;
+}
+
+.contact .container--contact .contact__content {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "title" "link";
+  justify-items: center;
+  grid-gap: 2.5em;
+  padding: 4.5em 1.5em;
+}
+
+.contact .container--contact .contact__content .contact__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+  text-align: center;
+}
+
+.contact .container--contact .contact__content .title--contact {
+  letter-spacing: -1px;
+}
+
+.contact .container--contact .contact__content .contact__link {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: link;
+}
+
+.contact .container--contact .contact--bg {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */

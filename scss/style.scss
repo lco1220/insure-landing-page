@@ -26,11 +26,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
 }
 
 h3 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
 }
 
 a {
@@ -40,6 +44,14 @@ a {
 
 section {
   width: 100%;
+}
+
+
+.link {
+  border: 2px solid $very-light-gray;
+  padding: .5em 1.5em;
+  text-transform: uppercase;
+  font-weight: $body-w700;
 }
 
 // Header
@@ -116,13 +128,6 @@ section {
       letter-spacing: 1px;
     }
 
-    .bg__content--link {
-      border: 2px solid $very-light-gray;
-      padding: .5em 1.5em;
-      text-transform: uppercase;
-      font-weight: $body-w700;
-    }
-
   }
 
 }
@@ -133,7 +138,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     grid-gap: 3em;
     justify-items: center;
-    margin: 9em 2.2em;
+    margin: 9em 1.8em;
 
     .service--title {
       position: relative;
@@ -149,7 +154,7 @@ section {
         background-color: $grayis-blue;
       }
 
-      .service--h1 {
+      .service--h2 {
         margin: .7em 0;
       }
     }
@@ -182,6 +187,48 @@ section {
 
       }
 
+    }
+
+  }
+}
+
+.contact {
+  .container--contact {
+    
+    background-color: $dark-violet;
+    color: $very-light-gray;
+    margin: 3em 1.8em;
+    position: relative;
+    
+    .contact__content {
+      display: grid;
+      grid-template-areas: 
+      "title"
+      "link";
+      justify-items: center;
+      grid-gap: 2.5em;
+
+      padding: 4.5em 1.5em;
+
+      .contact__title {
+        grid-area: title;
+        text-align: center;
+      }
+
+      .title--contact {
+        letter-spacing: -1px;
+      }
+
+      .contact__link {
+        grid-area: link;
+      }
+
+    }
+
+    .contact--bg {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
 
   }
