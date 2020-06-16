@@ -1,0 +1,140 @@
+@import 'config';
+
+:root {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: $very-dark-violet;
+  font-family: $body-font;
+  font-weight: $body-w400;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+}
+
+h1, h2, h3 {
+  font-family: $heading-font;
+  font-weight: $heading-w400;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  width: 100%;
+}
+
+// Header
+#header {
+  padding: 1.2em;
+
+  #navbar {
+    display: grid;
+    grid-template-columns: auto 50px;
+    align-items: center;
+
+    .nav__mobile {
+      justify-self: end;
+    }
+
+  }
+
+}
+
+#main {
+  width: 100%;
+}
+
+.hero {
+
+  .container--hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    background-color: $dark-violet;
+    color: $very-light-gray;
+    position: relative;
+  }
+
+  .hero__bg {
+
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    .bg__icons {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0 ;
+      left: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url('/images/bg-pattern-intro-left-mobile.svg');
+      top: 0;
+      left: 0;
+      transform: translate(0% , -3%);
+      width: 168px;
+      height: 165px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url('/images/bg-pattern-intro-right-mobile.svg');
+      right: 0;
+      bottom: 0;
+      transform: translate(0%, 55%);
+      width: 124px;
+      height: 330px;
+    }
+
+    .bg__content {
+      margin: 7.5em 2.2em;
+    }
+
+    .bg__content--h1 {
+      margin-bottom: .5em;
+      line-height: 45px;
+    }
+
+    .bg__content--p {
+      margin-bottom: 3em;
+      line-height: 25px;
+      letter-spacing: 1px;
+    }
+
+    .bg__content--link {
+      border: 2px solid $very-light-gray;
+      padding: .5em 1.5em;
+      text-transform: uppercase;
+      font-weight: $body-w700;
+    }
+
+  }
+
+}
+
+.service {
+  
+}
