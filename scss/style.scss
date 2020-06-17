@@ -54,6 +54,15 @@ ul {
   overflow: hidden;
 }
 
+.opacity_show {
+  opacity: 1;
+  transition: opacity 850ms ease-in;
+}
+
+.opacity_noshow {
+  opacity: 0;
+}
+
 .link {
   border: 2px solid $very-light-gray;
   padding: .5em 1.5em;
@@ -74,14 +83,6 @@ ul {
       justify-self: end;
       cursor: pointer;
 
-      #threelines {
-        opacity: 1;
-      }
-
-      #cross {
-        opacity: 0;
-      }
-
     }
 
   }
@@ -98,6 +99,7 @@ ul {
   transform: scale(1,0);
   transform-origin: top;
   transition: transform 700ms ease-in-out;
+  z-index: 1;
 
   .container--mobile {
     margin: 3em 1.8em;
@@ -134,13 +136,13 @@ ul {
     position: absolute;
     bottom: 0;
   }
-
+  
+  &.active {
+    transform: scale(1,1);
+    transition: transform 750ms ease-in-out;
+  }
 }
 
-.active {
-  z-index: 1;
-  transform: scale(1,1);
-}
 
 #main {
   width: 100%;
