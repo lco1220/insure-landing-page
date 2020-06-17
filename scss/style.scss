@@ -46,6 +46,10 @@ section {
   width: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 
 .link {
   border: 2px solid $very-light-gray;
@@ -75,14 +79,47 @@ section {
   width: 100%;
 }
 
+.container {
+  max-width: 1000px;
+}
+
 .hero {
+  background-color: $dark-violet;
+  color: $very-light-gray;
+  position: relative;
+  height: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url('/images/bg-pattern-intro-left-mobile.svg');
+    top: 0;
+    left: 0;
+    transform: translate(0% , 275%);
+    width: 168px;
+    height: 165px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url('/images/bg-pattern-intro-right-mobile.svg');
+    right: 0;
+    bottom: 0;
+    transform: translate(0%, 55%);
+    width: 124px;
+    height: 330px;
+  }
 
   .container--hero {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-    background-color: $dark-violet;
-    color: $very-light-gray;
     position: relative;
+    height: 100%;
+  }
+
+  .hero__image--img {
+    height: 100%;
   }
 
   .hero__bg {
@@ -91,30 +128,8 @@ section {
     text-align: center;
     width: 100%;
 
-    &::before {
-      content: "";
-      position: absolute;
-      background: url('/images/bg-pattern-intro-left-mobile.svg');
-      top: 0;
-      left: 0;
-      transform: translate(0% , -3%);
-      width: 168px;
-      height: 165px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      background: url('/images/bg-pattern-intro-right-mobile.svg');
-      right: 0;
-      bottom: 0;
-      transform: translate(0%, 53%);
-      width: 124px;
-      height: 330px;
-    }
-
     .bg__content {
-      margin: 7.5em 2.2em;
+      margin: 7em 1.8em;
     }
 
     .bg__content--h1 {
@@ -123,9 +138,10 @@ section {
     }
 
     .bg__content--p {
+      font-size: 1.8rem;
       margin-bottom: 3em;
-      line-height: 25px;
-      letter-spacing: 1px;
+      line-height: 30px;
+      letter-spacing: -1px;
     }
 
   }
@@ -151,7 +167,7 @@ section {
         left: 25%;
         width: 50%;
         height: 2px;
-        background-color: $grayis-blue;
+        background-color: $grayish-blue;
       }
 
       .service--h2 {
@@ -229,6 +245,94 @@ section {
       position: absolute;
       top: 0;
       right: 0;
+    }
+
+  }
+}
+
+#footer {
+  width: 100%;
+
+  .container--footer {
+    position: relative;
+    .footer__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('/images/bg-pattern-footer-mobile.svg');
+      width: 374px;
+      height: 173px;
+    }
+
+    .footer__content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+      margin: 4em 1.8em;
+      grid-gap: 2em;
+      padding: 3em 0;
+
+      .footer__top {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 2.5em;
+        justify-items: center;
+        padding: 2em 0;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $grayish-blue;
+        }
+
+
+        .footer__smaccnt {
+          width: 50%;
+        }
+
+        .smaccnt__items {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+      }
+
+      .footer__bottom {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 2em;
+        justify-items: center;
+
+
+        .footer__bt--col {
+          letter-spacing: 1px;
+          font-size: 1.4rem;
+          font-weight: $body-w700;
+          text-transform: uppercase;
+          text-align: center;
+          line-height: 20px;
+        }
+
+        .bt__title {
+          margin-bottom: 2em;
+          color: $dark-grayish-violet;
+        }
+
+        .bt__body--item {
+          margin: .5em 0;
+        }
+
+        .bt__body--link {
+          color: $very-dark-violet;
+        }
+
+      }
+
+
     }
 
   }
