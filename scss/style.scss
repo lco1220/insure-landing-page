@@ -385,8 +385,9 @@ ul {
           content: "";
           display: block;
           width: 100%;
-          height: 2px;
-          background-color: $grayish-blue;
+          height: 1px;
+          background-color: $dark-grayish-violet;
+          opacity: .3;
         }
 
 
@@ -452,7 +453,7 @@ ul {
 
     #navbar {
       grid-template-columns: auto 1fr 2fr;
-      padding: 1em 1.8em;
+      padding: .3em 1.8em;
 
       .nav__mobile {
         display: none;
@@ -720,12 +721,13 @@ ul {
 
           .nav__item--link {
             font-size: 1.4rem;
+            font-weight: $body-w700;
             text-transform: uppercase;
             color: $dark-grayish-violet;
           }
 
           .link--desk {
-            padding: .5em .5em;
+            padding: .5em 1.6em;
             color: $very-dark-violet;
           }
 
