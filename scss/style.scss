@@ -452,6 +452,8 @@ ul {
 
     #navbar {
       grid-template-columns: auto 1fr 2fr;
+      padding: 1em 1.8em;
+
       .nav__mobile {
         display: none;
       }
@@ -494,7 +496,7 @@ ul {
 
     .container--hero {
       grid-column-gap: 3em;
-      padding: 5em 0;
+      padding: 5em 1.8em;
     }
 
     .hero__image {
@@ -579,7 +581,7 @@ ul {
   #service {
     .container--service {
       justify-items: start;
-      padding: 12em 0;
+      padding: 12em 1.8em;
 
       .service--title {
         position: relative;
@@ -676,7 +678,7 @@ ul {
           justify-items: start;
 
           .footer__bt--col {
-            text-align: le;
+            text-align: left;
           }
 
         }
